@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .hello_color{
-            color: yellowgreen;
-        }
-
-    </style>
 </head>
 <body>
     {% include 'menu.html' %}
-    <h1 class="hello_color">Hello!</h1>
+<h2>Languages</h2>  
+<ol>
+    {% for lang in items %}
+        <li>{{lang}}</li>
+    {% endfor %}
+</ol>
+
+
+
 </body>
 </html>

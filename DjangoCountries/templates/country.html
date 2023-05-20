@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% include 'menu.html' %}
-    <h2>{{item.country}}</h2>
+{% extends 'base.html' %}
+{% block content %}
+    <h2>{{item.country }}</h2>
     Languages: <br>
 <ul>
-    {% for language in item.languages %}
-    <li>{{language}}</li><br>
+    {% for lang in language%}
+    <li>{{lang.name}}</li><br>
     {% endfor %}
 </ul>   
     <br>
-</body>
-</html>
+{% endblock %}
